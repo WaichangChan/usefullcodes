@@ -1,0 +1,10 @@
+新建本地仓库并且关联到远程仓库
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/WaichangChan/usefullcodes.git
+git push -u origin master
+
+把本地已经存在的仓库关联到远程仓库
+git remote add origin https://github.com/WaichangChan/usefullcodes.git
+git push -u origin master
