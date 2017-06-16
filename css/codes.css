@@ -26,3 +26,22 @@ li:first-child:nth-last-child(4),
 li:first-child:nth-last-child(4) ~ li {
 	width: 25%;
 }
+
+/*无缝滚动，需要配合在列表最后加一行冗余数据，并且绝对定位*/
+@keyframes scroll {
+    0% {
+        @include transform( translateY( 0 ) );
+    }
+
+    50%{
+        @include transform( translateY( -100% ) );
+    }
+
+    50.01%{
+        @include transform( translateY( 0 ) );
+    }
+
+    100%{
+        @include transform( translateY( -100% ) );
+    }
+}
