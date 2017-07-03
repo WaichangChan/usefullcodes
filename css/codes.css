@@ -7,6 +7,11 @@ button {
 
 }
 
+
+/*css 进度条*/
+background:-webkit-linear-gradient(90deg,#ffc400 10%,#fff2bc 10%)
+background:linear-gradient(90deg,#ffc400 10%,#fff2bc 10%)
+
 /*根据子节点数量显示不同的样式*/
 li:first-child:nth-last-child(1) {
 	width: 100%;
