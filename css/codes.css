@@ -50,3 +50,8 @@ li:first-child:nth-last-child(4) ~ li {
         @include transform( translateY( -100% ) );
     }
 }
+
+/*inline-block单行垂直居中
+1、所有元素使用 display: inline-block
+2、如果只有单个元素，比如img，需要在父容器加上 line-height：父容器的高度
+*/

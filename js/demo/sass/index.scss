@@ -1,0 +1,28 @@
+/*button{
+    font-size: inherit;
+    font-family: inherit;
+    outline: none;
+    color: currentColor;
+    border: none;
+    padding: 0;
+
+}
+
+$fontSize: pxToRem( 24px );*/
+
+/*.alert{
+
+    .tipBox{
+        //@include center();
+        //width: pxToRem(540px);
+        //height: pxToRem(300px);
+        //min-height: pxToRem(300px);
+        background: #f00;
+        //@include border-radius(pxToRem(8px) pxToRem(8px));
+    }
+}*/
+@import "../../common/sass/commonFun";
+//$uiWidth:750px;
+.win{
+    height: pxToRem( 400px );
+}
