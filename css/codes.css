@@ -55,3 +55,8 @@ li:first-child:nth-last-child(4) ~ li {
 1、所有元素使用 display: inline-block
 2、如果只有单个元素，比如img，需要在父容器加上 line-height：父容器的高度
 */
+
+/*Safari 7以上的hack*/
+_::-webkit-full-page-media, _:future, :root .levelProgress > span {
+    //@include gradient-text;
+}
