@@ -60,3 +60,35 @@ li:first-child:nth-last-child(4) ~ li {
 _::-webkit-full-page-media, _:future, :root .levelProgress > span {
     //@include gradient-text;
 }
+
+.btn-close{
+    position: absolute;
+    top: pxToRem(20px);
+    right: pxToRem(20px);
+    width: pxToRem(48px);
+    height: pxToRem(48px);
+
+    background: #fff;
+    border-radius: 50%;
+
+    @include rotate(45deg);
+
+    &:before, &:after{
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 60%;
+        left: 50%;
+        top: 50%;
+        background: #000;
+
+    }
+
+    &:before{
+        @include transform(translate(-50%, -50%) scaleY(1.5)  );
+    }
+
+    &:after{
+        @include transform(translate(-50%, -50%)  rotate(90deg) scaleY(1.5)  );
+    }
+}
