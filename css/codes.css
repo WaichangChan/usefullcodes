@@ -4,7 +4,7 @@ button {
 	outline: 0;
 	-webkit-appearance: none;
 	font-family: inherit;
-
+	background-color: transparent;
 }
 
 
@@ -91,4 +91,54 @@ _::-webkit-full-page-media, _:future, :root .levelProgress > span {
     &:after{
         @include transform(translate(-50%, -50%)  rotate(90deg) scaleY(1.5)  );
     }
+}
+
+/*
+自定义checkbox 或者 radio样式
+
+*/
+input[type='checkbox']{
+    display: inline-block;
+    -webkit-appearance: none;
+    width: pxToRem(28px);
+    height: pxToRem(28px);
+    border: 1px solid #dbdbdb;
+    border-radius: 50%;
+    vertical-align: middle;
+    //float: right;
+    overflow: hidden;
+
+    &:checked{
+        background: #EB6;
+    }
+
+    &:after{
+        display: inline-block;
+        content: '';
+        width: pxToRem(5px);
+        height: pxToRem(12px);
+        border-right: 2px solid #FFF;
+        border-bottom: 2px solid #FFF;
+        @include rotate(55deg);
+        margin-left: pxToRem(10px);
+        margin-top: pxToRem(4px);
+    }
+}
+/*使用border构建>样式的图标，通过scale来做水平和垂直居中*/
+.record-toggle{
+    height: pxToRem(80px);
+    width: pxToRem(80px);
+    
+    border: pxToRem(15px) solid transparent;
+
+    border-left-width: 0;
+    border-bottom-width: 0;
+
+    border-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #f98c3c), color-stop(100%, #ffec84)) 1 1;
+    border-image: -webkit-linear-gradient(-45deg, #f98c3c, #ffec84) 1 1;
+    border-image: linear-gradient(-45deg, #f98c3c, #ffec84) 1 1;
+
+    border-radius: pxToRem(8px);
+
+    @include transform(rotate(45deg) scale(.2)  );
 }
