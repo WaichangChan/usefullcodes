@@ -5,6 +5,8 @@ button {
 	-webkit-appearance: none;
 	font-family: inherit;
 	background-color: transparent;
+	font-size: inherit;
+	color: currentColor;
 }
 
 
@@ -76,20 +78,23 @@ _::-webkit-full-page-media, _:future, :root .levelProgress > span {
     &:before, &:after{
         content: '';
         position: absolute;
-        height: 1px;
-        width: 60%;
+        
         left: 50%;
         top: 50%;
         background: #000;
-
+		@include transform(translate(-50%, -50%) scaleY(1.5)  );
     }
 
     &:before{
-        @include transform(translate(-50%, -50%) scaleY(1.5)  );
+    	height: 1px;
+        width: 60%;
+        
     }
 
     &:after{
-        @include transform(translate(-50%, -50%)  rotate(90deg) scaleY(1.5)  );
+    	width: 1px;
+        height: 60%;
+        //@include transform(translate(-50%, -50%)  rotate(90deg) scaleY(1.5)  );
     }
 }
 
