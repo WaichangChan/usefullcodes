@@ -7,6 +7,7 @@ button {
 	background-color: transparent;
 	font-size: inherit;
 	color: currentColor;
+
 }
 
 
@@ -147,3 +148,10 @@ input[type='checkbox']{
 
     @include transform(rotate(45deg) scale(.2)  );
 }
+
+/*iphone plus 毛玻璃效果需要加上
+*
+*filter: blur( 100px );
+*-webkit-backdrop-filter: blur(100px);
+*
+*/
