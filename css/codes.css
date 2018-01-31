@@ -155,3 +155,19 @@ input[type='checkbox']{
 *-webkit-backdrop-filter: blur(100px);
 *
 */
+
+//android 4.4以上的内置浏览器才支持 -webkit-background-clip: text
+@supports ( -webkit-background-clip: text ){
+  .match-title-text {
+    @include background-image(linear-gradient(#fff6da 0, #e7c36f 80%));
+    @include background-clip(text);
+    color: transparent;
+  }
+}
+
+//兼容Safari 7+
+_::-webkit-full-page-media, _:future, :root .match-title-text {
+  @include background-image(linear-gradient(#fff6da 0, #e7c36f 80%));
+  @include background-clip(text);
+  color: transparent;
+}

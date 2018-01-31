@@ -8,3 +8,6 @@ git push -u origin master
 把本地已经存在的仓库关联到远程仓库
 git remote add origin https://github.com/WaichangChan/usefullcodes.git
 git push -u origin master
+
+强行更新远端代码带本地，放弃本地修改
+git reset --hard origin/develop
